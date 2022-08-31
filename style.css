@@ -1,17 +1,29 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {  /*Para configurar as fontes*/
+    --font1: Verdana, Geneva,Tahoma, sans-serif;
+    --font2: 'Fredericka the Great', cursive;
+    --font3: 'Sriracha', cursive;
+}
+
+
 *{
-margin: 0px;
-padding: 0px;
+    margin: 0px;
+    padding: 0px;
 
 }
 
 html, body{
     min-height: 100vh;  /*Tamanho minimo*/
     background-color: darkgrey;
+    font-family: var(--font1);
 }
 
-header{
+header{ /*Cabeçalho*/
     background-color: black;
     color: white;
     text-align: center;
@@ -20,45 +32,69 @@ header{
 header > h1{
     padding-top: 50px;  /*para deixar um espaço em cima*/
     font-variant: small-caps;
+    font-family: var(--font2);
+    font-size: 3,5em; /*Tamanho da fonte*/
 }
 
 header > p {
-padding-bottom: 50px;  /*Para deixar espaço em baixo do cabeçalho*/
+    padding-bottom: 50px;  /*Para deixar espaço em baixo do cabeçalho*/
 }
 
 header a, footer a{  /* Configurando o link cabeçalho*/
-color: white;
-text-decoration: none; /*Para tirar o sublinhado do link*/
-font-weight: bolder; /*para colocar em negrito*/
+    color: white;
+    text-decoration: none; /*Para tirar o sublinhado do link*/
+    font-weight: bolder; /*para colocar em negrito*/
 }
 
-header a:hover, footer a:hover{
+header a:hover, footer a:hover{ /*Links em geral*/
     text-decoration: underline;  /*Para colocar o sublinhado só quando o mouse passa por cima*/
 }
 
-section{ /*Faz com que almente o tamanho da tela */
-    padding-top: 20px;
+section {  /*Configurando o texto em geral*/
+    padding-top: 20px;  /*Almentar o tamanho*/
     padding-bottom: 20px;
     line-height: 2em; /*Espaçamento das linhas*/
     padding-left: 30px; /*Espaçamento do texto pro lado*/
+    font-family: var(--font3);
+    font-size: 4vw;  /*Tamanho da letra*/
 }
 
-section.normal{
+section > p {
+    padding-bottom: 2em; /*Para dá um espaço entre eles*/
+}
+
+section.normal { /*Configuração do texto normal*/
     background-color: white;
     color: black;
 }
 
-section.imagem{
+section.imagem {  /*Configuração do texto que bota a imagem*/
     background-color: rgba(58, 57, 57, 0.568);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.541);  /*Sombra na imagem*/
+    background-attachment: fixed;
 }
 
-section.imagem > p {
-    background-color: rgba(0, 0, 0, 0.219);
-    width: 400px;
+section.imagem > p { 
+    background-color: rgba(0, 0, 0, 0.493);
+    padding: 5px; /*Pra não ficar colado nas laterais das letras*/
+    display: inline-block;  /*Para a caixa ficar do tamanho do conteudo*/
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.664); /*Sombra no texto*/
 }
 
-footer{
+section#img01{
+    background-image: url(./imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02{
+    background-image: url(./imagens/background002.jpg);
+    background-size: cover;
+
+}
+
+footer{ /*final*/
     background-color: black;
     color: white;
     text-align: center;
